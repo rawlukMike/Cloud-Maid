@@ -1,0 +1,31 @@
+subscription: ""
+utc-runtime: "14:19"
+projects:
+  charmander:
+    contact: "charmander@gmail.com"
+    impersonate-service-account: "fire"
+    modules:
+      - image-cleaner:
+          extra:
+            keep-days: 40
+            test: true
+      - image-cleaner:
+          extra:
+            keep-days: 40
+            test: true
+      - disk-cleaner:
+          impersonate-service-account: "magma"
+          extra:
+            keep-days: 40
+
+  squirtle:
+    contact: "squirtle@gmail.com"
+    impersonate-service-account: "water"
+    modules:
+      - image-cleaner:
+          utc-runtime: "22:01"
+          extra:
+            keep-days: 40
+      - disk-cleaner:
+          extra:
+            keep-days: 40
